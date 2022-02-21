@@ -6,9 +6,9 @@ Also, you can check your dependencies security if you enabled dependabot alert.
 Just **Fork** this repo!
 
 ## Generate `package-lock.json`
-Make directory on root directory into `npm_install`. (ex. `beautiful-npm-web`)  
-You just need to put `package.json` into it.  
-GitHub Actions will execute, and gerate `package_lock.json` and `.node_modules`.  
+Make directory into **`npm_install/`**. (ex. `beautiful-npm-web`)  
+You just need to put **`package.json`** into it.  
+GitHub Actions will execute, and generate **`package_lock.json` and `.node_modules`**.  
 This might help people who wants `package_lock.json` or `.node_modules`!
 
 ## If you like this, please :star: to this repository!
