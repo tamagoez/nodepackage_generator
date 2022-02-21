@@ -1,5 +1,6 @@
 # package-lock_generater
-Automatically generate package-lock.json for people who using Vercel and etc.
+Automatically generate package-lock.json for people who using Vercel and etc.  
+Also, you can check your dependencies security if you enabled dependabot alert.
 
 ## How to use?
 Just **Fork** this repo, and make directory on root directory.  
