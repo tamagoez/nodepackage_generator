@@ -34,7 +34,9 @@ jobs:
             if [ -d $filepath ]; then
               echo $filepath
               cd $filepath
-              cp -n package.json.org package.json
+              if [ -d package.json.org ]; then
+                cp -u package.json.org package.json
+              fi
               npm install
               cp -n package.json package.json.org
             fi
