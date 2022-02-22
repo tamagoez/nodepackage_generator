@@ -37,7 +37,7 @@ jobs:
             if [ -d $filepath ]; then
               echo $filepath
               cd $filepath
-              if [ $(grep npm-install run.txt >/dev/null && echo true) -eq 'true' ]; then
+              if [ $(grep npm-install run.txt >/dev/null && echo $?) -eq 0 ]; then
                 echo $filepath
                 cd $filepath/npm-install
                 npm install
