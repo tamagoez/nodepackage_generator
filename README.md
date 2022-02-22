@@ -1,6 +1,6 @@
 # NodePackage_Generator
 Automatically generate `package-lock.json` or `node_modules` or `yarn.lock` for people who using Vercel and etc.  
-Also, you can check your dependencies security if you enabled dependabot alert.
+Also, you can check your dependencies security if you enabled dependabot alert or `npc` command option.
 
 ## How to use?
 Just **Fork** this repo, and follow under steps!
