@@ -35,6 +35,8 @@ jobs:
           files="./*"
           for filepath in $files; do
             if [ -d $filepath ]; then
+              echo $filepath
+              cd $filepath
               if [ $(grep npm-install run.txt >/dev/null && echo true) -eq 'true' ]; then
                 echo $filepath
                 cd $filepath/npm-install
