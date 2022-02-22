@@ -22,11 +22,6 @@ jobs:
               echo $filepath
               cd $filepath
               check=$(grep npm-install run.txt >/dev/null && echo $?)
-            　if [ "$check" -eq "0" ]; then
-                rm -rf npm-install
-                mkdir npm-install
-                cp package.json npm-install/package.json
-              fi
             fi
           done
       - name: Generate
