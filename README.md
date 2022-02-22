@@ -5,8 +5,25 @@ Also, you can check your dependencies security if you enabled dependabot alert.
 ## How to use?
 Just **Fork** this repo, and follow under steps!
 
-## Generate `package-lock.json`
+Make directory what named your project name under root. (You should set it to your `package.json`'s `name`.) (ex. `react-tsx-website`)  
+And put your `package.json` into it.  
+After that, make `run.txt` into same directory. (We're going to use this file to generate)
 
-## Generate `yarn.lock`
+Setting step finished!  
+But you can't do anything now, so choose step from under rows!
 
-## If you like this, please :star: to this repository!
+### Generate `package-lock.json`
+Add **`npm-install`** text into `run.txt`.  
+
+### Generate `yarn.lock`
+Add **`yarn-install`** text into `run.txt`.
+
+### Update packages(ncu)
+Add **`ncu`** text into `run.txt`.
+
+## After a while, GitHub Actions will push files automatically.
+If GitHub Actions doesn't work, you should check `Settings` -> `Actions` -> `General`.  
+If GitHub Actions disabled, please enable `Allow all actions`.
+
+# If you like this, please :star: to this repository!
+Thanks for using this!
