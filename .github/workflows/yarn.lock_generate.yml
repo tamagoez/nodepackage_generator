@@ -31,7 +31,7 @@ jobs:
             if [ -d $filepath ]; then
               echo $filepath
               cd $filepath
-              npm install
+              yarn install
             fi
           done
       - name: Push
