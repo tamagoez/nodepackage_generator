@@ -49,7 +49,7 @@ jobs:
               ncu
             fi
           done
-       - name: Update
+      - name: Update
         run: |
           files="./npm-check-updates/*"
           for filepath in $files; do
@@ -59,7 +59,7 @@ jobs:
               ncu -u
             fi
           done
-       - name: Install again
+      - name: Install again
         run: |
           files="./npm-check-updates/*"
           for filepath in $files; do
