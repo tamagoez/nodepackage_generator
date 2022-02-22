@@ -39,7 +39,7 @@ jobs:
               cd $filepath
               if [ $(grep npm-install run.txt >/dev/null && echo $?) -eq 0 ]; then
                 echo $filepath
-                cd $filepath/npm-install
+                cd npm-install
                 npm install
               fi
             fi
