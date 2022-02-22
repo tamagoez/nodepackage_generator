@@ -3,7 +3,7 @@ Automatically generate `package-lock.json` or `node_modules` or `yarn.lock` for 
 Also, you can check your dependencies security if you enabled dependabot alert.
 
 ## How to use?
-Just **Fork** this repo!
+Just **Fork** this repo, and follow under steps!
 
 ## Generate `package-lock.json`
 Make directory into **`npm_install/`**. (ex. `beautiful-npm-web`)  
