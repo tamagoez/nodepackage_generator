@@ -22,7 +22,7 @@ jobs:
               echo $filepath
               cd $filepath
               check=$(grep npm-install run.txt >/dev/null && echo true)
-            　if [ $check -eq true ]; then
+            　if [ "$check" -eq "true" ]; then
                 rm -rf npm-install
                 mkdir npm-install
                 cp package.json npm-install/package.json
