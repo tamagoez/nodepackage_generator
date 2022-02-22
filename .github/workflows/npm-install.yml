@@ -20,7 +20,7 @@ jobs:
           for filepath in $files; do
             if [ -d $filepath ]; then
             　if [ $(grep npm-install run.txt >/dev/null && echo true) -eq true ]; then
-               echo $filepath
+                echo $filepath
                 cd $filepath
                 rm -rf npm-install
                 mkdir npm-install
