@@ -23,7 +23,7 @@ Add **`ncu`** text into `run.txt`.
 
 ## After a while, GitHub Actions will push files automatically.
 If GitHub Actions doesn't work, you should check `Settings` -> `Actions` -> `General`.  
-If GitHub Actions disabled, please enable `Allow all actions`.
+If  disabled, please enable `Allow all actions`.
 
 # If you like this, please :star: to this repository!
 Thanks for using this!
