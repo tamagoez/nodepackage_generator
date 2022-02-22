@@ -71,16 +71,6 @@ jobs:
               npm install
             fi
           done
-      - name: Report
-        run: |
-          files="./npm-check-updates/*"
-          for filepath in $files; do
-            if [ -d $filepath ]; then
-              echo $filepath
-              cd $filepath
-              npm audit
-            fi
-          done
       - name: Push
         run: |
           git config --global user.name "github-actions[bot]"
