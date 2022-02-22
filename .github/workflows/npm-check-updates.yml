@@ -26,7 +26,7 @@ jobs:
             fi
           done
       - name: Install npm-check-updates
-        ru: npm i -g npm-check-updates
+        run: npm i -g npm-check-updates
       - name: Install & copy `package.json`
         run: |
           files="./npm-check-updates/*"
