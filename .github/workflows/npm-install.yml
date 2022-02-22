@@ -22,7 +22,8 @@ jobs:
               echo $filepath
               cd $filepath
               check=$(grep npm-install run.txt >/dev/null && echo $?)
-              if [ "$check" -eq "0" ]; then
+              echo $check
+              if [ "$check" = "0" ]; then
               fi
             fi
           done
