@@ -1,4 +1,6 @@
-# npm_yarn-generater
+# This is OLD repo!<br>You should check [this](github.com/tamagoez/nodepackage_generator)!
+
+# npm_yarn-generator
 Automatically generate `package-lock.json` or `node_modules` or `yarn.lock` for people who using Vercel and etc.  
 Also, you can check your dependencies security if you enabled dependabot alert.
 
