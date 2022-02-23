@@ -1,7 +1,9 @@
-## Project Settings
-### `package.json`
+# Project Settings
+## `package.json`
 **exist** [EDIT]()
-### `run.txt`
+## `run.txt`
 **exist** [EDIT]()
-### Generate Settings
+## Generate Settings
  - [x] **npm-install** -=> `npm install`
+ - [x] **yarn-install** -=> `yarn install`
+ - [ ] **ncu** -=> `npm install + ncu -u`
