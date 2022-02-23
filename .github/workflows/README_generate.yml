@@ -46,19 +46,19 @@ jobs:
               else
                 echo ' - [ ] **npm-install** -=> `npm install`  ' >> README.md
               fi
-              echo 'run `npm install` to generate `package-lock.json`' >> README.md
+              echo -e 'run `npm install` to generate `package-lock.json`\n' >> README.md
               if [ $(grep yarn-install run.txt >/dev/null && echo $?) = "0" ]; then
                 echo ' - [x] **yarn-install** -=> `yarn install`  ' >> README.md
               else
                 echo ' - [ ] **yarn-install** -=> `yarn install`  ' >> README.md
               fi
-              echo 'run `yarn install` to generate `yarn.lock`' >> README.md
+              echo -e 'run `yarn install` to generate `yarn.lock`\n' >> README.md
               if [ $(grep ncu run.txt >/dev/null && echo $?) = "0" ]; then
                 echo ' - [x] **ncu** -=> `npm install + ncu -u`  ' >> README.md
               else
                 echo ' - [ ] **ncu** -=> `npm install + ncu -u`  ' >> README.md
               fi
-              echo 'run `npm install` and `ncu -u` to update vulnerability' >> README.md
+              echo -e 'run `npm install` and `ncu -u` to update vulnerability\n' >> README.md
             fi
           done
       - name: Push
