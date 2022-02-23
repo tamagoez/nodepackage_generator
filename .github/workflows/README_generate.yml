@@ -28,11 +28,17 @@ jobs:
               echo $filepath
               cd $filepath
               echo -e '## Project Settings' > README.md
-              echo -e "### `package.json`" >> README.md
+              echo -e '### `package.json`' >> README.md
               if [ -e "package.json" ]; then
-                echo -e '`package.json` exist.\n[EDIT]()' >> README.md
+                echo -e '`package.json` exist.\n  [EDIT]()' >> README.md
               else
                 echo -e '**`package.json` does not exist!**\nYou need to push it into this directory!' >> README.md
+              fi
+              echo -e '### `run.txt`' >> README.md
+              if [ -e "run.txt" ]; then
+                echo -e '`run.txt` exist.\n  [EDIT]()' >> README.md
+              else
+                echo -e '**`run.txt` does not exist!**\nYou should push it into this directory.' >> README.md
               fi
               echo '### Generate Settings' >> README.md
               if [ $(grep npm-install run.txt >/dev/null && echo $?) = "0" ]; then
