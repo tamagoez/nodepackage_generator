@@ -1,7 +1,7 @@
 # This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
 # For more information see: https://help.github.com/actions/language-and-framework-guides/publishing-nodejs-packages
 
-name: npm-check-updates
+name: ncu
 
 on:
   push:
@@ -14,61 +14,65 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16
-      - name: Clean up
+      - name: Clean up & Prepare
         run: |
-          files="./npm-check-updates/*"
+          files="./*"
           for filepath in $files; do
             if [ -d $filepath ]; then
               echo $filepath
               cd $filepath
-              rm -rfv package-lock.json
-              rm -rfv node_modules
-            fi
-          done
-      - name: Install npm-check-updates
-        run: npm i -g npm-check-updates
-      - name: Install & copy `package.json`
-        run: |
-          files="./npm-check-updates/*"
-          for filepath in $files; do
-            if [ -d $filepath ]; then
-              echo $filepath
-              cd $filepath
-              if [ -d package.json.org ]; then
-                cp -u package.json.org package.json
+              check=$(grep ncu run.txt >/dev/null && echo $?)
+              echo $check
+              if [ "$check" = "0" ]; then
+                rm -rf ncu
+                mkdir ncu
+                cp package.json ncu/package.json
               fi
-              npm install
-              cp -n package.json package.json.org
             fi
           done
-      - name: Report
+      - name: Install ncu
+        run: npm i -g npm-check-updates
+      - name: Install
         run: |
-          files="./npm-check-updates/*"
+          files="./*"
           for filepath in $files; do
             if [ -d $filepath ]; then
               echo $filepath
               cd $filepath
-              ncu
+              if [ $(grep ncu run.txt >/dev/null && echo $?) -eq 0 ]; then
+                echo $filepath
+                cd ncu
+                npm install
+              fi
             fi
           done
-      - name: Update
+      - name: Report & Update
         run: |
-          files="./npm-check-updates/*"
+          files="./*"
           for filepath in $files; do
             if [ -d $filepath ]; then
               echo $filepath
               cd $filepath
-              ncu -u
+              if [ $(grep ncu run.txt >/dev/null && echo $?) -eq 0 ]; then
+                echo $filepath
+                cd ncu
+                ncu
+                ncu -u
+              fi
             fi
           done
-      - name: Install again
+      - name: Reflect
         run: |
-          files="./npm-check-updates/*"
+          files="./*"
           for filepath in $files; do
             if [ -d $filepath ]; then
               echo $filepath
               cd $filepath
-              npm install
+              if [ $(grep ncu run.txt >/dev/null && echo $?) -eq 0 ]; then
+                echo $filepath
+                cd ncu
+                npm install
+              fi
             fi
           done
       - name: Push
