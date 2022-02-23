@@ -2,8 +2,8 @@
 ## `package.json`
 **exist** [EDIT](https://github.com/tamagoez/nodepkg-actions/edit/main/./vividarmy-wikinotes/package.json)
 ## `run.txt`
-**exist** [EDIT]()
-## Generate Settings
+**exist** [EDIT](https://github.com/tamagoez/nodepkg-actions/edit/main/./vividarmy-wikinotes/run.txt)
+## Generate Settings [EDIT](https://github.com/tamagoez/nodepkg-actions/edit/main/./vividarmy-wikinotes/run.txt)
  - [x] **npm-install** -=> `npm install`  
 run `npm install` to generate `package-lock.json`
 
