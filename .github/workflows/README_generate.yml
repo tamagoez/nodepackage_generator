@@ -30,7 +30,7 @@ jobs:
               echo -e '# Project Settings' > README.md
               echo -e '## `package.json`' >> README.md
               if [ -e "package.json" ]; then
-                echo -e '**exist** [EDIT]()' >> README.md
+                echo -e '**exist** [EDIT](https://github.com/${GITHUB_REPOSITORY}/edit/${GITHUB_REF_NAME}/${filepath}/package.json)' >> README.md
               else
                 echo -e '**`package.json` does not exist!**\nYou need to push it into this directory!' >> README.md
               fi
