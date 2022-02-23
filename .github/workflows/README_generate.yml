@@ -28,13 +28,13 @@ jobs:
               echo $filepath
               cd $filepath
               echo -e '# Project Settings' > README.md
-              echo -e "## `package.json` [[EDIT](https://github.com/${{ github.repository }}/edit/${{ github.ref_name }}/${filepath}/package.json)]" >> README.md
+              echo -e '## `package.json`'" [[EDIT](https://github.com/${{ github.repository }}/edit/${{ github.ref_name }}/${filepath}/package.json)]" >> README.md
               if [ -e "package.json" ]; then
                 echo -e "**exist**" >> README.md
               else
                 echo -e '**`package.json` does not exist!**  \nYou need to push it into this directory!' >> README.md
               fi
-              echo -e "## `run.txt` [[EDIT](https://github.com/${{ github.repository }}/edit/${{ github.ref_name }}/${filepath}/run.txt)]" >> README.md
+              echo -e '## `run.txt`'" [[EDIT](https://github.com/${{ github.repository }}/edit/${{ github.ref_name }}/${filepath}/run.txt)]" >> README.md
               if [ -e "run.txt" ]; then
                 echo -e "**exist**" >> README.md
               else
