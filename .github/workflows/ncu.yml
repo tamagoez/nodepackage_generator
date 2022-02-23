@@ -5,6 +5,7 @@ name: ncu
 
 on:
   push:
+  workflow_dispatch:
 
 jobs:
   build:
