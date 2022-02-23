@@ -4,4 +4,4 @@
 ### `run.txt`
 **exist** [EDIT]()
 ### Generate Settings
- -  ✓ `npm install`
+ - [] **npm-install* -=> `npm install`
