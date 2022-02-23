@@ -2,7 +2,7 @@
 ## `package.json` [[EDIT](https://github.com/tamagoez/nodepkg-actions/edit/main/${filepath}/package.json)]
 **exist**
 ## `run.txt` [[EDIT](https://github.com/tamagoez/nodepkg-actions/edit/main/${filepath}/run.txt)]
-**`run.txt` does not exist!**
+**`run.txt` does not exist!**  
 You should push it into this directory.
 ## Generate Settings [[EDIT](https://github.com/tamagoez/nodepkg-actions/edit/main/./vividarmy-wikinotes/run.txt)]
  - [ ] **npm-install**  
