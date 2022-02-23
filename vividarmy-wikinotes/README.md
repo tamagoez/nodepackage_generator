@@ -12,4 +12,5 @@ run `yarn install` to generate `yarn.lock`
 
  - [x] **ncu** -=> `npm install + ncu -u`  
 run `npm install` and `ncu -u` to update vulnerability
+This will take longer time than other options.
 
