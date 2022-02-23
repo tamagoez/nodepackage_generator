@@ -6,7 +6,10 @@
 ## Generate Settings
  - [x] **npm-install** -=> `npm install`  
 run `npm install` to generate `package-lock.json`
+
  - [x] **yarn-install** -=> `yarn install`  
 run `yarn install` to generate `yarn.lock`
+
  - [x] **ncu** -=> `npm install + ncu -u`  
 run `npm install` and `ncu -u` to update vulnerability
+
