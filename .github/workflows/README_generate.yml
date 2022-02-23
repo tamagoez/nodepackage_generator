@@ -58,7 +58,7 @@ jobs:
               else
                 echo ' - [ ] **ncu** -=> `npm install + ncu -u`  ' >> README.md
               fi
-              echo -e 'run `npm install` and `ncu -u` to update vulnerability\n' >> README.md
+              echo -e 'run `npm install` and `ncu -u` to update vulnerability\nThis will take longer time than other options.\n' >> README.md
             fi
           done
       - name: Push
