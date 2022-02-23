@@ -42,9 +42,9 @@ jobs:
               fi
               echo '### Generate Settings' >> README.md
               if [ $(grep npm-install run.txt >/dev/null && echo $?) = "0" ]; then
-                echo ' -  ✓ `npm install`' >> README.md
+                echo ' - [] **npm-install* -=> `npm install`' >> README.md
               else
-                echo ' -  ✗ `npm install`' >> README.md
+                echo ' - [x] **npm-install** -=> `npm install`' >> README.md
               fi
             fi
           done
