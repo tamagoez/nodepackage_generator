@@ -36,11 +36,11 @@ jobs:
               fi
               echo -e '## `run.txt`' >> README.md
               if [ -e "run.txt" ]; then
-                echo -e '**exist** [EDIT]()' >> README.md
+                echo -e "**exist** [EDIT](https://github.com/${{ github.repository }}/edit/${{ github.ref_name }}/${filepath}/run.txt)" >> README.md
               else
                 echo -e '**`run.txt` does not exist!**\nYou should push it into this directory.' >> README.md
               fi
-              echo '## Generate Settings' >> README.md
+              echo "## Generate Settings [EDIT](https://github.com/${{ github.repository }}/edit/${{ github.ref_name }}/${filepath}/run.txt)" >> README.md
               if [ $(grep npm-install run.txt >/dev/null && echo $?) = "0" ]; then
                 echo ' - [x] **npm-install** -=> `npm install`  ' >> README.md
               else
