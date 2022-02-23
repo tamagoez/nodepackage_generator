@@ -1,13 +1,14 @@
 # This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
 # For more information see: https://help.github.com/actions/language-and-framework-guides/publishing-nodejs-packages
 
-name: yarn.lock generate
+name: yarn-install
 
 on:
   push:
+  workflow_dispatch:
 
 jobs:
-  build:
+  install:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -16,28 +17,39 @@ jobs:
           node-version: 16
       - name: Clean up
         run: |
-          files="./yarn_install/*"
+          files="./*"
           for filepath in $files; do
             if [ -d $filepath ]; then
               echo $filepath
               cd $filepath
-              rm -rfv yarn.lock
+              check=$(grep yarn-install run.txt >/dev/null && echo $?)
+              echo $check
+              if [ "$check" = "0" ]; then
+                rm -rf yarn-install
+                mkdir yarn-install
+                cp package.json yarn-install/package.json
+              fi
             fi
           done
       - name: Generate
         run: |
-          files="./yarn_install/*"
+          files="./*"
           for filepath in $files; do
             if [ -d $filepath ]; then
               echo $filepath
               cd $filepath
-              yarn install
+              if [ $(grep yarn-install run.txt >/dev/null && echo $?) -eq 0 ]; then
+                echo $filepath
+                cd yarn-install
+                yarn install
+              fi
             fi
           done
       - name: Push
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull
           git add -A
           git commit -m "Push output"
           git push
