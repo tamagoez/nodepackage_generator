@@ -1,9 +1,7 @@
 ## Project Settings
 ### `package.json`
-`package.json` exist.
-  [EDIT]()
+**exist** [EDIT]()
 ### `run.txt`
-`run.txt` exist.
-  [EDIT]()
+**exist** [EDIT]()
 ### Generate Settings
  -  ✓ `npm install`
