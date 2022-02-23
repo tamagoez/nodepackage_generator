@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: README.md
 
 # Controls when the workflow will run
 on:
@@ -35,3 +35,10 @@ jobs:
               fi
             fi
           done
+      - name: Push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Push output"
+          git push
