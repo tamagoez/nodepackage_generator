@@ -18,7 +18,7 @@ Add **`npm-install`** text into `run.txt`.
 ### Generate `yarn.lock`
 Add **`yarn-install`** text into `run.txt`.
 
-### Update packages(ncu)
+### Update packages(npm-check-updates)
 Add **`ncu`** text into `run.txt`.
 
 ## After a while, GitHub Actions will push files automatically.
