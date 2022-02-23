@@ -1,6 +1,6 @@
 # Project Settings
 ## `package.json`
-**exist** [EDIT]()
+**exist** [EDIT](https://github.com/${GITHUB_REPOSITORY}/edit/${GITHUB_REF_NAME}/${filepath}/package.json)
 ## `run.txt`
 **exist** [EDIT]()
 ## Generate Settings
