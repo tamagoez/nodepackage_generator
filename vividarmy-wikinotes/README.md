@@ -6,4 +6,4 @@
 ## Generate Settings
  - [x] **npm-install** -=> `npm install`
  - [x] **yarn-install** -=> `yarn install`
- - [ ] **ncu** -=> `npm install + ncu -u`
+ - [x] **ncu** -=> `npm install + ncu -u`
