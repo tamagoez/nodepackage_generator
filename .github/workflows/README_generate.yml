@@ -27,24 +27,34 @@ jobs:
             if [ -d $filepath ]; then
               echo $filepath
               cd $filepath
-              echo -e '## Project Settings' > README.md
-              echo -e '### `package.json`' >> README.md
+              echo -e '# Project Settings' > README.md
+              echo -e '## `package.json`' >> README.md
               if [ -e "package.json" ]; then
                 echo -e '**exist** [EDIT]()' >> README.md
               else
                 echo -e '**`package.json` does not exist!**\nYou need to push it into this directory!' >> README.md
               fi
-              echo -e '### `run.txt`' >> README.md
+              echo -e '## `run.txt`' >> README.md
               if [ -e "run.txt" ]; then
                 echo -e '**exist** [EDIT]()' >> README.md
               else
                 echo -e '**`run.txt` does not exist!**\nYou should push it into this directory.' >> README.md
               fi
-              echo '### Generate Settings' >> README.md
+              echo '## Generate Settings' >> README.md
               if [ $(grep npm-install run.txt >/dev/null && echo $?) = "0" ]; then
                 echo ' - [x] **npm-install** -=> `npm install`' >> README.md
               else
                 echo ' - [ ] **npm-install** -=> `npm install`' >> README.md
+              fi
+              if [ $(grep yarn-install run.txt >/dev/null && echo $?) = "0" ]; then
+                echo ' - [x] **yarn-install** -=> `yarn install`' >> README.md
+              else
+                echo ' - [ ] **yarn-install** -=> `yarn install`' >> README.md
+              fi
+              if [ $(grep ncu run.txt >/dev/null && echo $?) = "0" ]; then
+                echo ' - [x] **ncu** -=> `npm install + ncu -u`' >> README.md
+              else
+                echo ' - [ ] **ncu** -=> `npm install + ncu -u`' >> README.md
               fi
             fi
           done
