@@ -1,9 +1,9 @@
 # Project Settings
-## `package.json`
-**exist** [EDIT](https://github.com/tamagoez/nodepkg-actions/edit/main/./vividarmy-wikinotes/package.json)
-## `run.txt`
-**exist** [EDIT](https://github.com/tamagoez/nodepkg-actions/edit/main/./vividarmy-wikinotes/run.txt)
-## Generate Settings [EDIT](https://github.com/tamagoez/nodepkg-actions/edit/main/./vividarmy-wikinotes/run.txt)
+## `package.json` [[EDIT](https://github.com/tamagoez/nodepkg-actions/edit/main/${filepath}/package.json)]
+**exist**
+## `run.txt` [[EDIT](https://github.com/tamagoez/nodepkg-actions/edit/main/${filepath}/run.txt)]
+**exist**
+## Generate Settings [[EDIT](https://github.com/tamagoez/nodepkg-actions/edit/main/./vividarmy-wikinotes/run.txt)]
  - [x] **npm-install**  
 > run `npm install` to generate `package-lock.json`
 
