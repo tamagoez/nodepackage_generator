@@ -32,7 +32,7 @@ jobs:
               if [ -e "package.json" ]; then
                 echo -e '`package.json` exist.\n[EDIT]()' >> README.md
               else
-                 echo -e '**`package.json` doesn\'n t exist!**\nYou need to push it into this directory!' >> README.md
+                echo -e '**`package.json` does not exist!**\nYou need to push it into this directory!' >> README.md
               fi
               echo '### Generate Settings' >> README.md
               if [ $(grep npm-install run.txt >/dev/null && echo $?) = "0" ]; then
