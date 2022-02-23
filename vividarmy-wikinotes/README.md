@@ -1,7 +1,7 @@
 # Project Settings
-## `package.json` [[EDIT](https://github.com/tamagoez/nodepkg-actions/edit/main/${filepath}/package.json)]
+##  [[EDIT](https://github.com/tamagoez/nodepkg-actions/edit/main/./vividarmy-wikinotes/package.json)]
 **exist**
-## `run.txt` [[EDIT](https://github.com/tamagoez/nodepkg-actions/edit/main/${filepath}/run.txt)]
+##  [[EDIT](https://github.com/tamagoez/nodepkg-actions/edit/main/./vividarmy-wikinotes/run.txt)]
 **`run.txt` does not exist!**  
 You should push it into this directory.
 ## Generate Settings [[EDIT](https://github.com/tamagoez/nodepkg-actions/edit/main/./vividarmy-wikinotes/run.txt)]
